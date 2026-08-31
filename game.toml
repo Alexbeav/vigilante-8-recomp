@@ -1,0 +1,53 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Vigilante 8"
+id = "SLES-01212"
+players = 1
+exe = "disc/SLES_012.12"
+disc = ""
+load_address = "0x80010000"
+entry_pc = "0x800116D4"
+text_size = "0x00056000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Vigilante 8 (Europe).bin"
+cue_name = "Vigilante 8 (Europe).cue"
+boot_exe = "SLES_012.12"
+known_sizes = [607488672]
+known_md5 = [
+  "f26dda304c1a0897f757c2fcc295ef9e",
+]
+known_sha1 = [
+  "b261e4f8ab681398c3309b05cb8ebe22e15ecbe1",
+]
+known_crc32 = [
+  "2c8e1382",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "vigilante-8- Recompiled"
+memcard_dir = "saves"
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 13
+required_disc_fp = "ab06c20517ee47bdcdb377ee21961fd13a8d57f9ed6e96e7c319283efb99069c"

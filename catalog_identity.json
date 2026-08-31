@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Vigilante 8",
+    "id": "SLES-01212",
+    "boot_exe": "SLES_012.12"
+  },
+  "marketing": {
+    "description": "A native recompilation setup host for Vigilante 8.",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Vigilante 8 (Europe).cue",
+    "bin_name": "Vigilante 8 (Europe).bin",
+    "track_counts": [
+      13
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 607488672,
+      "md5": "f26dda304c1a0897f757c2fcc295ef9e",
+      "sha1": "b261e4f8ab681398c3309b05cb8ebe22e15ecbe1",
+      "crc32": "2c8e1382"
+    },
+    "disc_fp": "ab06c20517ee47bdcdb377ee21961fd13a8d57f9ed6e96e7c319283efb99069c"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800116D4",
+    "text_size": "0x00056000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 702,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
