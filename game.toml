@@ -15,17 +15,20 @@ stack_base = "0x801FFFF0"
 # Digests are for data Track 01 (first BINARY FILE / TRACK 01).
 [prepare_disc]
 out_dir = "disc"
-bin_name = "Vigilante 8 (Europe).bin"
+bin_name = "Vigilante 8 (Europe) (Track 01).bin"
 cue_name = "Vigilante 8 (Europe).cue"
 boot_exe = "SLES_012.12"
-known_sizes = [607488672]
+known_sizes = [257574576, 607488672]
 known_md5 = [
+  "db7feb5b3a470858e6e03aac510373d1",
   "f26dda304c1a0897f757c2fcc295ef9e",
 ]
 known_sha1 = [
+  "0a39394280555203bf29e33e95e561e4ff50edb1",
   "b261e4f8ab681398c3309b05cb8ebe22e15ecbe1",
 ]
 known_crc32 = [
+  "82fad7d3",
   "2c8e1382",
 ]
 
